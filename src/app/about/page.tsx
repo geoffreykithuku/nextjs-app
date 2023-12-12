@@ -1,13 +1,20 @@
-import React from 'react'
-export const metadata = {
-  title: "About",
-  description: "About",
-};
+"use client"
+
+import { useRouter } from "next/navigation"
+import React from "react";
+
 
 const About = () => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/");
+  };
   return (
-    <div>About</div>
-  )
-}
+    <div>
+      <h1>About</h1>
+      <button onClick={handleClick}>Back home</button>
+    </div>
+  );
+};
 
-export default About
+export default About;
